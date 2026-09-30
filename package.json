@@ -1,0 +1,66 @@
+{
+  "name": "@cubis/vfsclient",
+  "version": "0.0.3",
+  "description": "Isomorphic VFS Client SDK for Node.js and Browser file uploads, chunked streaming, caching, and bucket management",
+  "keywords": [
+    "vfs",
+    "storage",
+    "upload",
+    "chunked-upload",
+    "resumable",
+    "cache",
+    "file-management",
+    "s3",
+    "r2",
+    "edge",
+    "cubis"
+  ],
+  "author": "Cubis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cubetiqlabs/vfsclient-sdk-node.git"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "prepublishOnly": "bun run test && bun run typecheck && bun run build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "@types/semver": "^7.8.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@noble/hashes": "^2.4.0",
+    "canonicalize": "^5.1.0",
+    "semver": "^7.8.5",
+    "tweetnacl": "^1.0.3"
+  }
+}

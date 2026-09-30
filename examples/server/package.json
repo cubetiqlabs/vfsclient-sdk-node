@@ -1,0 +1,17 @@
+{
+  "name": "vfs-server-example",
+  "version": "1.0.0",
+  "description": "Node.js & Bun server-side example using @cubis/vfsclient",
+  "type": "module",
+  "scripts": {
+    "start": "bun run index.ts",
+    "dev": "bun --watch index.ts"
+  },
+  "dependencies": {
+    "@cubis/vfsclient": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.9",
+    "typescript": "^5.8.2"
+  }
+}

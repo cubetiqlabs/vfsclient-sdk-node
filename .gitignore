@@ -1,0 +1,6 @@
+node_modules
+dist
+.vfs-cache
+*.log
+.DS_Store
+.test*
